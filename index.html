@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strona Kina</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <header>
+            <h1>Złote Klisze</h1>
+        </header>
+
+        <section id="wybieranie_filmu">
+            <h2>Wybierz film jaki byś chciał obejrzeć</h2>
+            <div class="karta_filmu">
+                <img src="Micheal_Wock3.jpg" alt="Micheal Wock 3">
+                <button onclick="Wybierzfilm('Micheal Wock 3')">Micheal Wock 3</button>
+            </div>
+            <div class="karta_filmu">
+                <img src="Olbrzym_Baxton.jpg" alt="Olbrzym Baxton">
+                <button onclick="Wybierzfilm('Olbrzym Baxton')">Olbrzym Baxton</button>
+            </div>
+            <div class="karta_filmu">
+                <img src="Seat_ibiza.jpg" alt="Seat ibiza i jej 101 napraw">
+                <button onclick="Wybierzfilm('Seat ibiza i jej 101 napraw')">Seat ibiza i jej 101 napraw</button>
+            </div>
+        </section>
+
+        <section id="Panelbiletów" style="display: none;">
+            <h2>Wybierz jakie bilety chcesz dla filmu: <p id="Wybrany_film"></p></h2>
+            <label for="Normalnybilet">Bilet normalny (35zł)</label>
+            <input type="number" id="Normalnybilet" value="0" min="0">
+            <label for="Ulgowybilet">Bilet ulgowy (20zł)</label>
+            <input type="number" id="Ulgowybilet" value="0" min="0">
+            <button onclick="Pokażmiejsca()">Zobacz dostępne miejsca</button>
+        </section>
+        <section id="Panelmiejsc" style="display: none;">
+            <input type="checkbox" class="miejsce" value="A1">
+            <input type="checkbox" class="miejsce" value="A2">
+            <input type="checkbox" class="miejsce" value="A3">
+            <input type="checkbox" class="miejsce" value="A4">
+            <input type="checkbox" class="miejsce" value="A5">
+            <input type="checkbox" class="miejsce" value="A6">
+            <input type="checkbox" class="miejsce" value="A7">
+            <input type="checkbox" class="miejsce" value="A8">
+            <input type="checkbox" class="miejsce" value="A9">
+            <input type="checkbox" class="miejsce" value="A11">
+            <input type="checkbox" class="miejsce" value="A10">
+            <input type="checkbox" class="miejsce" value="A12">
+            <input type="checkbox" class="miejsce" value="A13">
+            <input type="checkbox" class="miejsce" value="A14">
+            <input type="checkbox" class="miejsce" value="A15">
+            <input type="checkbox" class="miejsce" value="B1">
+            <input type="checkbox" class="miejsce" value="B2">
+            <input type="checkbox" class="miejsce" value="B3">
+            <input type="checkbox" class="miejsce" value="B4">
+            <input type="checkbox" class="miejsce" value="B5">
+            <input type="checkbox" class="miejsce" value="B6">
+            <input type="checkbox" class="miejsce" value="B7">
+            <input type="checkbox" class="miejsce" value="B8">
+            <input type="checkbox" class="miejsce" value="B9">
+            <input type="checkbox" class="miejsce" value="B10">
+            <input type="checkbox" class="miejsce" value="B11">
+            <input type="checkbox" class="miejsce" value="B12">
+            <input type="checkbox" class="miejsce" value="B13">
+            <input type="checkbox" class="miejsce" value="B14">
+            <input type="checkbox" class="miejsce" value="B15">
+            <input type="checkbox" class="miejsce" value="C1" >
+            <input type="checkbox" class="miejsce" value="C2" >
+            <input type="checkbox" class="miejsce" value="C3" >
+            <input type="checkbox" class="miejsce" value="C4" >
+            <input type="checkbox" class="miejsce" value="C5" >
+            <input type="checkbox" class="miejsce" value="C6" >
+            <input type="checkbox" class="miejsce" value="C7" >
+            <input type="checkbox" class="miejsce" value="C8" >
+            <input type="checkbox" class="miejsce" value="C9" >
+            <input type="checkbox" class="miejsce" value="C10" >
+            <input type="checkbox" class="miejsce" value="C11" >
+            <input type="checkbox" class="miejsce" value="C12" >
+            <input type="checkbox" class="miejsce" value="C13" >
+            <input type="checkbox" class="miejsce" value="C14" >
+            <input type="checkbox" class="miejsce" value="C15" >
+            <button onclick="Podsumowanie()">Podsumowanie</button>
+        </section>
+
+        <section id="Podsumowanie" style="display: none;">
+            <h2>Podsumowanie twojego kupna</h2>
+            <p>Łączna ilośc biletów kupiony: Normalnych <span id="iloscnormalnych"></span> oraz Ulgowych <span id="ilosculgowych"></span></p>
+            <p>Wybran miejsca: <span id="jakiemiejsca"></span></p>
+            <p>Całkowity koszt: <span id="koszt"></span>zł</p>
+        </section>
+
+        
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
